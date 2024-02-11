@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground: #f7f7f7;
+  --background-start-rgb: 42, 173, 35;
+  --background-end-rgb: 255, 199, 154;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +17,8 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--foreground);
+  font-family: "font-sans", sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -25,7 +26,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
+.glass-effect {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Kolor tła z 50% przezroczystości */
+  backdrop-filter: blur(8px); /* Rozmycie tła */
+  border-radius: 8px; /* Zaokrąglenie rogów */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Cień */
+  padding: 1rem; /* Wewnętrzne wypełnienie */
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
