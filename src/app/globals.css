@@ -34,7 +34,6 @@ body {
     0.5
   ); /* Kolor tła z 50% przezroczystości */
   backdrop-filter: blur(8px); /* Rozmycie tła */
-  border-radius: 8px; /* Zaokrąglenie rogów */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Cień */
   padding: 1rem; /* Wewnętrzne wypełnienie */
 }

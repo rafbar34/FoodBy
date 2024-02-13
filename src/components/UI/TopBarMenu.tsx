@@ -8,7 +8,7 @@ export const TopBarMenu = ({ children }: { children: ReactNode }) => {
   };
   return (
     <div className="flex flex-col min-h-screen ">
-      <nav className="w-full md:flex justify-end hidden">
+      <nav className="w-full md:flex justify-end hidden absolute">
         <ul className=" flex justify-evenly w-1/2">
           <li className="border-1 rounded-sm px-10 py-1 bg-[#50d71e]">
             <Link href="/">Strona główna</Link>
