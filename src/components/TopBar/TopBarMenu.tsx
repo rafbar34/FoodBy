@@ -7,7 +7,7 @@ export const TopBarMenu = ({ children }: { children: ReactNode }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen  ">
       <nav className="w-full md:flex justify-end hidden absolute">
         <ul className=" flex justify-evenly w-1/2">
           <li className="border-1 rounded-sm px-10 py-1 bg-[#50d71e]">
@@ -17,10 +17,16 @@ export const TopBarMenu = ({ children }: { children: ReactNode }) => {
             <Link href="/about">O nas</Link>
           </li>
           <li className="border-1 rounded-sm px-10 py-1">
-            <Link href="/contact">Kontakt</Link>
+            <Link href="/offer">Oferta</Link>
           </li>
           <li className="border-1 rounded-sm px-10 py-1">
-            <Link href="/profile">Profil</Link>
+            <Link href="/profile">Blog</Link>
+          </li>
+          <li className="border-1 rounded-sm px-10 py-1">
+            <Link href="/profile">Terminy</Link>
+          </li>
+          <li className="border-1 rounded-sm px-10 py-1">
+            <Link href="/contact">Kontakt</Link>
           </li>
         </ul>
       </nav>
@@ -47,6 +53,7 @@ export const TopBarMenu = ({ children }: { children: ReactNode }) => {
           </ul>
         )}
       </nav>
+      <div className="mb-10 sm:mb-24"/>
       {children}
     </div>
   );

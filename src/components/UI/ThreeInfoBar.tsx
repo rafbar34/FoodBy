@@ -19,9 +19,9 @@ export const ThreeInfoBar = ({
   title3,
 }: Props) => {
   return (
-    <div className="w-full rounded-md py-10 mb-16 bg-black bg-opacity-45 flex justify-around">
+    <div className="w-full rounded-md py-10 mb-16 bg-black bg-opacity-45 flex sm:flex-row flex-col justify-around">
       <div className="flex flex-col justify-center items-center">
-        <span className="text-2xl bold">
+        <span className="text-sm sm:text-2xl bold">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -31,8 +31,8 @@ export const ThreeInfoBar = ({
         </span>
         <span>{title1}</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <span className="text-2xl bold">
+      <div className="flex flex-col justify-center items-center my-10 sm:my-0">
+        <span className="text-sm sm:text-2xl bold">
           {" "}
           <motion.h1
             initial={{ opacity: 0 }}
@@ -41,10 +41,10 @@ export const ThreeInfoBar = ({
             {number2}+
           </motion.h1>
         </span>
-        <span>Stworzonych jadłospisow{title2}</span>
+        <span>{title2}</span>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <span className="text-2xl bold">
+        <span className="text-sm sm:text-2xl bold">
           {" "}
           <motion.h1
             initial={{ opacity: 0 }}

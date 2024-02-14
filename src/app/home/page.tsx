@@ -1,11 +1,14 @@
 "use client";
-import { useEffect, useState } from "react";
-import { specializations, welcomeCardDesc } from "../../data/WelcomePage/data";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import {
+  specializations,
+  welcomeCardDesc,
+} from "../../../data/WelcomePage/data";
 import { WelcomeCard } from "@/components/WelcomePage/WelcomeCard";
-import { TopBarMenu } from "@/components/UI/TopBarMenu";
+import { TopBarMenu } from "@/components/TopBar/TopBarMenu";
 import { ThreeInfoBar } from "@/components/UI/ThreeInfoBar";
-import Image from "next/image";
-import oats from "../../assets/3ae1d5280694965b7a952c7db98f8e80.jpg";
+import { Widget } from "@/components/UI/Widget";
+import { Button } from "@/components/UI/Button";
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState<Array<string>>([]);
   const [count, setCount] = useState(440);
@@ -26,7 +29,15 @@ export default function Home() {
     }, 300);
   }, []);
 
-  const updateCount = ({ number, setState, goal }) => {
+  const updateCount = ({
+    number,
+    setState,
+    goal,
+  }: {
+    number: number;
+    setState: Dispatch<SetStateAction<number>>;
+    goal: number;
+  }) => {
     if (number < goal) {
       setTimeout(() => {
         setState((prevCount) => prevCount + 1);
@@ -44,7 +55,7 @@ export default function Home() {
       <TopBarMenu>
         <section className="">
           <div className=" flex justify-between px-20 flex-col items-center ">
-            <div className="mt-10 sm:mt-24">
+            <div className="">
               <h2 className=" text-3xl text-center font-sans">
                 Witajcie w świecie smaku i wygody! Witamy serdecznie na stronie
                 FoodBy!
@@ -70,31 +81,16 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className="px-20 w-full">
+        <section className="px-10 sm:px-20 w-full ">
           {specializations.map((specialization, index) => {
             return (
-              <div
-                key={specialization.title}
-                className={"flex justify-center"}>
-                <div className={"w-3/4  rounded-l-full glass-effect flex mt-5"}>
-                  <Image
-                    width={240}
-                    height={240}
-                    src={specialization?.image}
-                    alt="oats"
-                    className="border-2 border-grey h-56 w-60 rounded-full"
-                  />
-
-                  <div className="flex flex-col justify-evenly w-3/4 px-10">
-                    <div className="text-center w-full text-black">
-                      {specialization.title}
-                    </div>
-                    <div className="text-black">{specialization.desc}</div>
-                  </div>
-                </div>
-              </div>
+              <Widget
+                key={index}
+                data={specialization}
+              />
             );
           })}
+          <Button title="Oferta" />
         </section>
       </TopBarMenu>
     </div>
