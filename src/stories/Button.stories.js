@@ -1,7 +1,12 @@
-import { Button } from "../components/UI/Button";
+import { SquareCard } from "../components/UI/Button";
 
 export default {
-  title: "Button",
-  component: Button,
+  title: "SquareCard",
+  component: SquareCard,
 };
-export const Red = () => <Button title="test"  />;
+export const Red = () => (
+  <SquareCard
+    title="test"
+    width={"1/2"}
+  />
+);
