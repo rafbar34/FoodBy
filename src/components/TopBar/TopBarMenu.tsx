@@ -8,24 +8,24 @@ export const TopBarMenu = ({ children }: { children: ReactNode }) => {
   };
   return (
     <div className="flex flex-col min-h-screen  ">
-      <nav className="w-full md:flex justify-end hidden absolute">
-        <ul className=" flex justify-evenly w-1/2">
-          <li className="border-1 rounded-sm px-10 py-1 bg-[#50d71e]">
+      <nav className=" md:flex justify-end hidden">
+        <ul className=" flex justify-around pr-10">
+          <li className="border-1 rounded-sm px-10 py-1 bg-[#50d71e] w-48">
             <Link href="/">Strona główna</Link>
           </li>
-          <li className="border-1 rounded-sm px-10 py-1">
+          <li className="border-1 rounded-sm px-10 py-1 w-32">
             <Link href="/about">O nas</Link>
           </li>
-          <li className="border-1 rounded-sm px-10 py-1">
+          <li className="border-1 rounded-sm px-10 py-1 w-16">
             <Link href="/offer">Oferta</Link>
           </li>
-          <li className="border-1 rounded-sm px-10 py-1">
+          <li className="border-1 rounded-sm px-10 py-1 w-16">
             <Link href="/blog">Blog</Link>
           </li>
-          <li className="border-1 rounded-sm px-10 py-1">
+          <li className="border-1 rounded-sm px-10 py-1 w-16">
             <Link href="/profile">Terminy</Link>
           </li>
-          <li className="border-1 rounded-sm px-10 py-1">
+          <li className="border-1 rounded-sm px-10 py-1 w-16">
             <Link href="/contact">Kontakt</Link>
           </li>
         </ul>
@@ -53,7 +53,7 @@ export const TopBarMenu = ({ children }: { children: ReactNode }) => {
           </ul>
         )}
       </nav>
-      <div className="mb-10 sm:mb-24"/>
+      <div className="mb-10 sm:mb-24" />
       {children}
     </div>
   );

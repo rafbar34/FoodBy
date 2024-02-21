@@ -7,8 +7,8 @@ export const SquareCard = ({
   title,
   desc,
 }: {
-  titleColor: string;
-  descColor: string;
+  titleColor?: string;
+  descColor?: string;
   width:
     | "1/4"
     | "1/3"
@@ -22,7 +22,7 @@ export const SquareCard = ({
     | 10
     | 24;
   title: string;
-  desc: string;
+  desc?: string;
 }) => {
   return (
     <div className={`glass-effect w-${width} text-black rounded-md border-2`}>
