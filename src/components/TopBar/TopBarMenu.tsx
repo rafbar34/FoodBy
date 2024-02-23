@@ -23,7 +23,7 @@ export const TopBarMenu = ({ children }: { children: ReactNode }) => {
             <Link href="/blog">Blog</Link>
           </li>
           <li className="border-1 rounded-sm px-10 py-1 w-16">
-            <Link href="/profile">Terminy</Link>
+            <Link href="/schudle">Terminy</Link>
           </li>
           <li className="border-1 rounded-sm px-10 py-1 w-16">
             <Link href="/contact">Kontakt</Link>
