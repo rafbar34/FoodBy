@@ -20,3 +20,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "failed to load data" });
   }
 }
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const client = await pool.connect();
+    const result = await client.query("SELECT * FROM schedule");
+    client.release();
+    return NextResponse.json({
+      schedule: result.rows,
+    });
+  } catch (err) {
+    return NextResponse.json({ error: "failed to load data" });
+  }
+}

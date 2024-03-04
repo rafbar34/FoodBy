@@ -10,7 +10,7 @@ const PostDetails = ({ params }: { params: { id: string } }) => {
   }, [params.id]);
   console.log(post);
   return (
-    <TopBarMenu>
+    <TopBarMenu isActive="blog">
       <div className="px-20 mb-20">
         <div className="glass-effect h-3/4 rounded-sm">
           <div>

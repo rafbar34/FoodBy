@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const SquareCard = ({
@@ -6,6 +7,7 @@ export const SquareCard = ({
   width,
   title,
   desc,
+  price,
 }: {
   titleColor?: string;
   descColor?: string;
@@ -23,13 +25,20 @@ export const SquareCard = ({
     | 24;
   title: string;
   desc?: string;
+  price?: number;
 }) => {
   return (
-    <div className={`glass-effect w-${width} text-black rounded-md border-2`}>
-      <h2 className={`text-xl text-center mb-10 text-${titleColor}`}>
-        {title}
-      </h2>
-      <p className={`text-center text-${descColor}`}>{desc}</p>
+    <div
+      className={`glass-effect w-${width} text-black rounded-md border-2 flex flex-col gap-10 justify-center items-center`}>
+      <h2 className={`text-xl  text-${titleColor}`}>{title}</h2>
+      <p className={` text-${descColor}`}>{desc}</p>
+      {price && (
+        <Link
+          href={"/schedule"}
+          className={` text-white border-2 bg-green-700 px-5 py-2 rounded-sm`}>
+          Cena: {price} zł
+        </Link>
+      )}
     </div>
   );
 };

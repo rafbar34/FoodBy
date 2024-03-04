@@ -14,7 +14,7 @@ const Blog = () => {
     setIsLoading(false);
   }, []);
   return (
-    <TopBarMenu>
+    <TopBarMenu isActive="blog">
       {isLoading && <div>Loading</div>}
       <div className="width-screen flex gap-6 px-20 mt-20">
         {posts &&

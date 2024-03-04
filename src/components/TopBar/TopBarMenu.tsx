@@ -1,7 +1,13 @@
 import Link from "next/link";
 import React, { ReactNode, useState } from "react";
 
-export const TopBarMenu = ({ children }: { children: ReactNode }) => {
+export const TopBarMenu = ({
+  children,
+  isActive,
+}: {
+  children: ReactNode;
+  isActive: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleButton = () => {
     setIsOpen(!isOpen);
@@ -10,24 +16,44 @@ export const TopBarMenu = ({ children }: { children: ReactNode }) => {
     <div className="flex flex-col min-h-screen  ">
       <nav className=" md:flex justify-end hidden">
         <ul className=" flex justify-around pr-10">
-          <li className="border-1 rounded-sm px-10 py-1 bg-[#50d71e] w-48">
+          <li
+            className={
+              isActive === "home"
+                ? "border-1 rounded-sm px-10 py-1 bg-[#50d71e] w-48"
+                : "border-1 rounded-sm px-10 py-1 w-48"
+            }>
             <Link href="/">Strona główna</Link>
           </li>
-          <li className="border-1 rounded-sm px-10 py-1 w-32">
+          <li
+            className={
+              isActive === "about"
+                ? "border-1 rounded-sm px-10 py-1 bg-[#50d71e] w-32"
+                : "border-1 rounded-sm px-10 py-1  w-32"
+            }>
             <Link href="/about">O nas</Link>
           </li>
-          <li className="border-1 rounded-sm px-10 py-1 w-16">
+          <li
+            className={
+              isActive === "offer"
+                ? "border-1 rounded-sm px-10 py-1 bg-[#50d71e]  w-32"
+                : "border-1 rounded-sm px-10 py-1  w-32"
+            }>
             <Link href="/offer">Oferta</Link>
           </li>
-          <li className="border-1 rounded-sm px-10 py-1 w-16">
+          <li
+            className={
+              isActive === "blog"
+                ? "border-1 rounded-sm px-10 py-1 bg-[#50d71e]  w-32"
+                : "border-1 rounded-sm px-10 py-1  w-32"
+            }>
             <Link href="/blog">Blog</Link>
           </li>
           <li className="border-1 rounded-sm px-10 py-1 w-16">
-            <Link href="/schudle">Terminy</Link>
+            <Link href="/schedule">Terminy</Link>
           </li>
-          <li className="border-1 rounded-sm px-10 py-1 w-16">
+          {/* <li className="border-1 rounded-sm px-10 py-1 w-16">
             <Link href="/contact">Kontakt</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <nav className="md:hidden block">

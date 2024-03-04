@@ -6,7 +6,7 @@ import { SquareCard } from "@/components/UI/SquareCard";
 
 const Offers = () => {
   return (
-    <TopBarMenu>
+    <TopBarMenu isActive="offer">
       <div className="w-screen grid grid-cols-3 gap-20 px-20 justify-items-center ">
         {offers.map((offer, index) => (
           <SquareCard
@@ -15,6 +15,7 @@ const Offers = () => {
             descColor="green-900"
             desc={offer.desc}
             title={offer.title}
+            price={offer.price}
             width="2/3"
           />
         ))}

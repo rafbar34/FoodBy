@@ -4,7 +4,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <TopBarMenu>
+    <TopBarMenu isActive="about">
       <div className="w-screen h-full flex items-center justify-center py-20">
         <div className="glass-effect text-gray-800 mx-10 sm:text-xl text-justify rounded-md  ">
           <div className="text-2xl text-center w-full my-10">

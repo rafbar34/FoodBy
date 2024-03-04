@@ -9,6 +9,7 @@ import { TopBarMenu } from "@/components/TopBar/TopBarMenu";
 import { ThreeInfoBar } from "@/components/UI/ThreeInfoBar";
 import { Widget } from "@/components/UI/Widget";
 import { Button } from "@/components/UI/Button";
+import Link from "next/link";
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState<Array<string>>([]);
   const [count, setCount] = useState(440);
@@ -52,7 +53,7 @@ export default function Home() {
 
   return (
     <div className="">
-      <TopBarMenu>
+      <TopBarMenu isActive="home">
         <section className="">
           <div className=" flex justify-between px-20 flex-col items-center ">
             <div className="">
@@ -90,7 +91,9 @@ export default function Home() {
               />
             );
           })}
-          <Button title="Oferta" />
+          <Link href={"/offer"}>
+            <Button title="Oferta" />
+          </Link>
         </section>
       </TopBarMenu>
     </div>

@@ -63,26 +63,32 @@ export const specializations = [
 export const offers = [
   {
     title: "Pierwsza konsultacja 1:1",
+    price: 99,
     desc: "Indywidualne spotkanie z doświadczonym dietetykiem. Analiza aktualnego stanu zdrowia, nawyków żywieniowych i celów żywieniowych klienta.\n Spersonalizowany plan żywieniowy dostosowany do potrzeb i preferencji klienta.\n Porady dotyczące zdrowego odżywiania, strategii kontroli wagi i utrzymania równowagi dietetycznej.",
   },
   {
     title: "Pakiet miesięczny 'Odżywianie w równowadze'",
+    price: 199,
     desc: "Trzy spotkania konsultacyjne (co 2 tygodnie) z dietetykiem. Ocena aktualnej diety i nawyków żywieniowych.\n Spersonalizowany plan żywieniowy dostosowany do celów klienta i stanu zdrowia.\n Regularne monitorowanie postępów i dostosowywanie planu żywieniowego w razie potrzeby.\n Dostęp do wsparcia dietetyka drogą elektroniczną w międzyczasie między spotkaniami.",
   },
   {
     title: "Kurs online 'Zdrowe gotowanie w praktyce'",
+    price: 279,
     desc: "Sześcio-tygodniowy kurs online prowadzony przez dietetyka.\n Moduły tematyczne na temat zdrowego odżywiania, równowagi dietetycznej i technik gotowania.\n Praktyczne wskazówki dotyczące planowania posiłków, przygotowywania zdrowych potraw i zmniejszania ilości odpadów żywnościowych.\n Zadania i ćwiczenia praktyczne, aby wzmocnić umiejętności kulinarne i zwiększyć świadomość żywieniową.",
   },
   {
     title: "Pakiet 'Wsparcie w diecie wegańskiej'",
+    price: 59,
     desc: "Dedykowane spotkania konsultacyjne z dietetykiem specjalizującym się w diecie wegańskiej.\n Ocena bilansu żywieniowego, źródeł składników odżywczych i suplementacji dla osób na diecie wegańskiej.\n Opracowanie spersonalizowanego planu żywieniowego uwzględniającego potrzeby żywieniowe i preferencje żywieniowe klienta.\n Porady dotyczące zdrowego odżywiania w diecie wegańskiej, w tym zbilansowanego spożycia białka, witamin i minerałów.",
   },
   {
     title: "Pakiet 'Zdrowy tryb życia dla całej rodziny'",
+    price: 79,
     desc: "Spotkania konsultacyjne dla osób dorosłych i dzieci.\n Indywidualne oceny żywieniowe i plany żywieniowe dostosowane do potrzeb i wieku każdego członka rodziny.\n Porady dotyczące wprowadzania zdrowych nawyków żywieniowych, organizacji posiłków rodzinnych i promowania zdrowego stylu życia.",
   },
   {
     title: "Warsztaty 'Żywność jako lekarstwo'",
+    price: 199,
     desc: "Interaktywne warsztaty i prelekcje prowadzone przez dietetyka.\n Odkrywanie roli żywności w profilaktyce chorób, wsparciu układu odpornościowego i promowaniu zdrowia.\n Praktyczne wskazówki dotyczące wyboru składników odżywczych, zakupów spożywczych i przygotowywania posiłków mających wpływ na zdrowie i samopoczucie.",
   },
 ];
